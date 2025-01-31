@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/quick_monorepo.iml" filepath="$PROJECT_DIR$/.idea/quick_monorepo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vite-typescript-part/vite-typescript-part.iml" filepath="$PROJECT_DIR$/vite-typescript-part/vite-typescript-part.iml" />
     </modules>
   </component>
 </project>
