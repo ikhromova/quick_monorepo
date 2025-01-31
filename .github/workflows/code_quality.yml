@@ -21,6 +21,8 @@ jobs:
         with:
           args: |
             --source-directory,java-part,--config,java-qodana.yaml
+          post-pr-comment: 'true'
+          upload-result: 'true'
           artifact-name: qodana-backend
         env:
             QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_BACKEND }}
@@ -41,6 +43,8 @@ jobs:
         with:
           args: |
             --source-directory,vite-typescript-part,--config,js-qodana.yaml
+          post-pr-comment: 'true'
+          upload-result: 'true'
           artifact-name: qodana-frontend
         env:
             QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_FRONTEND }}

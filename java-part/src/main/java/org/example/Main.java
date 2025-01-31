@@ -11,5 +11,8 @@ public class Main {
         }
         var b = 0;
         b = b;
+        if (b == 0) {
+
+        }
     }
 }
