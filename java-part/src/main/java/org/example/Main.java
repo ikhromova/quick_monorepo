@@ -9,5 +9,7 @@ public class Main {
         if (true) {
 
         }
+        var b = 0;
+        b = b;
     }
 }
