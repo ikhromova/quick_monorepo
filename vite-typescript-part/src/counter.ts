@@ -7,6 +7,9 @@ export function setupCounter(element: HTMLButtonElement) {
   if (!element) {
 
   }
+  if (true) {
+
+  }
   let count = counter
   count = count
   let variableSuper = counter
