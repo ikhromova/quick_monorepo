@@ -22,6 +22,8 @@ const Data = {
     if (!elementMap.has(element)) {
       elementMap.set(element, new Map());
     }
+    const sdfsf = elementMap.get(element);
+    const sdfsdfsdfsdfsf = elementMap.get(element);
     const instanceMap = elementMap.get(element);
 
     // make it clear we only want one instance per element

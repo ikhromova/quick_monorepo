@@ -10,4 +10,12 @@ public class Main {
     public static void newFunction2() {
         if (true) {}
     }
+
+    static final int b = 0;
+
+    if (b == 0) {
+
+    } else {
+
+    }
 }
