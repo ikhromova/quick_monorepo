@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.SPACE_LOGIN }}
           password: ${{ secrets.SPACE_TOKEN }}
       - name: 'Qodana Backend'
-        uses: JetBrains/qodana-action@v2024.2
+        uses: JetBrains/qodana-action@main
         with:
           args: |
             --source-directory,java-part,--config,java-qodana.yaml
@@ -49,7 +49,7 @@ jobs:
           username: ${{ secrets.SPACE_LOGIN }}
           password: ${{ secrets.SPACE_TOKEN }}
       - name: 'Qodana Frontend'
-        uses: JetBrains/qodana-action@v2024.2
+        uses: JetBrains/qodana-action@main
         with:
           args: |
             --source-directory,vite-typescript-part,--config,js-qodana.yaml
@@ -76,7 +76,7 @@ jobs:
           username: ${{ secrets.SPACE_LOGIN }}
           password: ${{ secrets.SPACE_TOKEN }}
       - name: 'Qodana Backend'
-        uses: JetBrains/qodana-action@v2024.2
+        uses: JetBrains/qodana-action@main
         with:
           args: |
             --source-directory,java-second-part,--config,java-second-qodana.yaml
@@ -103,7 +103,7 @@ jobs:
           username: ${{ secrets.SPACE_LOGIN }}
           password: ${{ secrets.SPACE_TOKEN }}
       - name: 'Qodana Frontend'
-        uses: JetBrains/qodana-action@v2024.2
+        uses: JetBrains/qodana-action@main
         with:
           args: |
             --source-directory,html-part,--config,js-html-qodana.yaml
