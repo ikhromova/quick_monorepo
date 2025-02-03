@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/html-part/html-part.iml" filepath="$PROJECT_DIR$/html-part/html-part.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-part/java-part.iml" filepath="$PROJECT_DIR$/java-part/java-part.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-second-part/java-second-part.iml" filepath="$PROJECT_DIR$/java-second-part/java-second-part.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/quick_monorepo.iml" filepath="$PROJECT_DIR$/.idea/quick_monorepo.iml" />
       <module fileurl="file://$PROJECT_DIR$/vite-typescript-part/vite-typescript-part.iml" filepath="$PROJECT_DIR$/vite-typescript-part/vite-typescript-part.iml" />
     </modules>
