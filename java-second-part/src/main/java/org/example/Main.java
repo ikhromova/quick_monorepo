@@ -8,14 +8,15 @@ public class Main {
         System.out.println("Hello, World!");
     }
     public static void newFunction2() {
-        if (true) {}
+        if (true) {
+
+        }
+
+        if (false) {
+
+        }
     }
 
     static final int b = 0;
 
-    if (b == 0) {
-
-    } else {
-
-    }
 }

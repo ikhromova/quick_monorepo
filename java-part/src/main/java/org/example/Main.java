@@ -14,5 +14,11 @@ public class Main {
         if (b == 0) {
 
         }
+
+        var c = 0;
+        c = c;
+        if (c == 0) {
+
+        }
     }
 }

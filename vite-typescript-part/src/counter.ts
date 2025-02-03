@@ -16,4 +16,7 @@ export function setupCounter(element: HTMLButtonElement) {
   variableSuper = count
   element.addEventListener('click', () => setCounter(counter + 1))
   setCounter(0)
+
+  const elementD = 0;
+  elementD = elementD;
 }
