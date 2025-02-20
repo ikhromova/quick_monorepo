@@ -22,7 +22,7 @@ steps:
     env: 
       QODANA_TOKEN: $(QODANA_TOKEN_BACKEND)
     inputs:
-      args: --source-directory,java-part,--config,java-qodana.yaml
+      args: --source-directory,java-part,--config,java-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_BACKEND)
       uploadResult: true
       artifactName: qodana-backend
       prMode: true
@@ -32,7 +32,7 @@ steps:
     env: 
       QODANA_TOKEN: $(QODANA_TOKEN_FRONTEND)
     inputs:
-      args:  --source-directory,vite-typescript-part,--config,js-qodana.yaml
+      args:  --source-directory,vite-typescript-part,--config,js-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_FRONTEND)
       uploadResult: true
       artifactName: qodana-frontend
       prMode: true
