@@ -44,6 +44,7 @@ steps:
       uploadResult: true
       artifactName: qodana-second-backend
       useNightly: true
+      cacheDir: '$(Agent.TempDirectory)/qodana/cache2'
   - task: QodanaScan@2024
     displayName: QODANA_SECOND_FRONTEND
     env: 
@@ -53,3 +54,4 @@ steps:
       uploadResult: true
       artifactName: qodana-second-frontend
       useNightly: true
+      cacheDir: '$(Agent.TempDirectory)/qodana/cache3'
