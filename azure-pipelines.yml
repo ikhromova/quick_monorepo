@@ -50,9 +50,9 @@ steps:
   - task: QodanaScan@2024
     displayName: QODANA_SECOND_FRONTEND
     env: 
-      QODANA_TOKEN: $(QODANA_SECOND_FRONTEND)
+      QODANA_TOKEN: $(QODANA_TOKEN_SECOND_FRONTEND)
     inputs:
-      args:  --source-directory,html-part,--config,js-html-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_SECOND_FRONTEND)
+      args:  --source-directory,html-part,--config,js-html-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_SECOND_FRONTEND)
       uploadResult: true
       artifactName: qodana-second-frontend
       prMode: true
