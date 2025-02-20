@@ -1,0 +1,34 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pr:
+  branches:
+    include:
+      - '*'
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: QodanaScan@2024
+    displayName: QODANA_FRONTEND
+    env: 
+      QODANA_TOKEN: $(QODANA_TOKEN_BACKEND)
+    inputs:
+      args: --source-directory,java-part,--config,java-qodana.yaml
+      uploadResult: true
+      artifactName: qodana-backend
+      prMode: true
+      useNightly: true
+  - task: QodanaScan@2024
+    displayName: QODANA_FRONTEND
+    env: 
+      QODANA_TOKEN: $(QODANA_TOKEN_FRONTEND)
+    inputs:
+      args:  --source-directory,vite-typescript-part,--config,js-qodana.yaml
+      uploadResult: true
+      artifactName: qodana-frontend
+      prMode: true
+      useNightly: true
