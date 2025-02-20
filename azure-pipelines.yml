@@ -25,7 +25,6 @@ steps:
       args: --source-directory,java-part,--config,java-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_BACKEND)
       uploadResult: true
       artifactName: qodana-backend
-      prMode: true
       useNightly: true
   - task: QodanaScan@2024
     displayName: QODANA_FRONTEND
@@ -35,7 +34,6 @@ steps:
       args:  --source-directory,vite-typescript-part,--config,js-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_FRONTEND)
       uploadResult: true
       artifactName: qodana-frontend
-      prMode: true
       useNightly: true
   - task: QodanaScan@2024
     displayName: QODANA_SECOND_BACKEND
@@ -45,7 +43,6 @@ steps:
       args: --source-directory,java-second-part,--config,java-second-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_SECOND_BACKEND)
       uploadResult: true
       artifactName: qodana-second-backend
-      prMode: true
       useNightly: true
   - task: QodanaScan@2024
     displayName: QODANA_SECOND_FRONTEND
@@ -55,5 +52,4 @@ steps:
       args:  --source-directory,html-part,--config,js-html-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_SECOND_FRONTEND)
       uploadResult: true
       artifactName: qodana-second-frontend
-      prMode: true
       useNightly: true
