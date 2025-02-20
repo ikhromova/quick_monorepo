@@ -18,6 +18,12 @@ public class Main {
 
         }
 
+        var b = 0;
+        b = b;
+        if (b == 0) {
+
+        }
+
         var c = 0;
         c = c;
         if (c == 0) {

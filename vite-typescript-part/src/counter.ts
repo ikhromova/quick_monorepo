@@ -19,4 +19,8 @@ export function setupCounter(element: HTMLButtonElement) {
 
   const elementD = 0;
   elementD = elementD;
+
+
+  const elementS = 0;
+  elementS = elementD;
 }
