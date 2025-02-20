@@ -17,6 +17,16 @@ public class Main {
         }
     }
 
+    public static void newFunction23() {
+        if (true) {
+
+        }
+
+        if (false) {
+
+        }
+    }
+
     static final int b = 0;
 
 }

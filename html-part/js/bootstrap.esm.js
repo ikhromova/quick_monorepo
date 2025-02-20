@@ -130,6 +130,10 @@ const isElement = object => {
   if (typeof object.jquery !== 'undefined') {
     object = object[0];
   }
+
+  if (typeof object.jquery !== 'undefined') {
+    object = object[0];
+  }
   return typeof object.nodeType !== 'undefined';
 };
 const getElement = object => {
