@@ -18,7 +18,7 @@ steps:
       command: login
       containerRegistry: JetbrainsTeamRegistry 
   - task: QodanaScan@2024
-    displayName: QODANA_FRONTEND
+    displayName: QODANA_BACKEND
     env: 
       QODANA_TOKEN: $(QODANA_TOKEN_BACKEND)
     inputs:
