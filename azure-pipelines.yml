@@ -1,0 +1,57 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pr:
+  branches:
+    include:
+      - '*'
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: Docker@2
+    displayName: Login to JetBrains Docker Registry
+    inputs:
+      command: login
+      containerRegistry: JetbrainsTeamRegistry 
+  - task: QodanaScan@2024
+    displayName: QODANA_BACKEND
+    env: 
+      QODANA_TOKEN: $(QODANA_TOKEN_BACKEND)
+    inputs:
+      args: --source-directory,java-part,--config,java-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_BACKEND)
+      uploadResult: true
+      artifactName: qodana-backend
+      useNightly: true
+  - task: QodanaScan@2024
+    displayName: QODANA_FRONTEND
+    env: 
+      QODANA_TOKEN: $(QODANA_TOKEN_FRONTEND)
+    inputs:
+      args:  --source-directory,vite-typescript-part,--config,js-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_FRONTEND)
+      uploadResult: true
+      artifactName: qodana-frontend
+      useNightly: true
+  - task: QodanaScan@2024
+    displayName: QODANA_SECOND_BACKEND
+    env: 
+      QODANA_TOKEN: $(QODANA_TOKEN_SECOND_BACKEND)
+    inputs:
+      args: --source-directory,java-second-part,--config,java-second-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_SECOND_BACKEND)
+      uploadResult: true
+      artifactName: qodana-second-backend
+      useNightly: true
+      cacheDir: '$(Agent.TempDirectory)/qodana/cache2'
+  - task: QodanaScan@2024
+    displayName: QODANA_SECOND_FRONTEND
+    env: 
+      QODANA_TOKEN: $(QODANA_TOKEN_SECOND_FRONTEND)
+    inputs:
+      args:  --source-directory,html-part,--config,js-html-qodana.yaml,-e,QODANA_TOKEN=$(QODANA_TOKEN_SECOND_FRONTEND)
+      uploadResult: true
+      artifactName: qodana-second-frontend
+      useNightly: true
+      cacheDir: '$(Agent.TempDirectory)/qodana/cache3'
